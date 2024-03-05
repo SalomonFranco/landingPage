@@ -43,12 +43,12 @@ const Form = () => {
             value={emailValue}
             placeholder="Your email address..."
             onChange={handleInputChange}
-            className="mb-4 w-full basis-2/3 rounded-full border border-pale-blue px-4 py-3 placeholder:text-pale-blue md:mb-0"
+            className="mb-4 w-full md:basis-2/3 rounded-full border border-pale-blue px-4 py-3 placeholder:text-pale-blue md:mb-0"
           />
           <button
             type="submit"
             onSubmit={handleSubmit}
-            className="w-full basis-1/3 rounded-full bg-blue py-3 text-white"
+            className="w-full md:basis-1/3 rounded-full bg-blue py-3 text-white"
           >
             Notify Me
           </button>
