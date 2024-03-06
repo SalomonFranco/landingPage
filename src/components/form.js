@@ -6,58 +6,56 @@ const Form = () => {
   const [errorMessage, setErrorMessage] = useState("");
 
   const handleInputChange = (e) => {
+    e.preventDefault();
+
     const inputValue = e.target.value;
+
     setEmailValue(inputValue);
 
     const isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(inputValue);
     setIsEmailValid(isValid);
 
     setErrorMessage("");
-
-    console.log({ emailValue });
   };
 
   const handleSubmit = (e) => {
-    console.log("handle submit called");
     e.preventDefault();
 
     if (!isEmailValid) {
-      console.log("Please provide a valid email address");
       setErrorMessage("Please provide a valid email address");
       return;
     }
-
-    // Continue with form submission logic or other actions
-    console.log("Form submitted with email:", emailValue);
   };
 
   return (
-    <section>
-      <div className="md:flex md:items-center md:justify-center">
-        <form
-          onSubmit={handleSubmit}
-          className="px-8 md:flex md:w-2/3 md:flex-row md:items-center md:justify-center md:gap-4"
-        >
+    <section className="flex-col md:flex md:w-full md:items-center md:justify-start">
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col items-start justify-center px-8 md:w-2/3 md:flex-row md:gap-4"
+      >
+        <div className="flex w-full flex-col items-center md:items-start">
           <input
-            type="email"
+            type="text"
             value={emailValue}
             placeholder="Your email address..."
             onChange={handleInputChange}
-            className="mb-4 w-full md:basis-2/3 rounded-full border border-pale-blue px-4 py-3 placeholder:text-pale-blue md:mb-0"
+            className={`w-full rounded-full border px-4 py-3 placeholder:text-pale-blue md:mb-0 md:basis-2/3 ${isEmailValid ? "border-pale-blue" : "border-light-red"}`}
           />
-          <button
-            type="submit"
-            onSubmit={handleSubmit}
-            className="w-full md:basis-1/3 rounded-full bg-blue py-3 text-white"
-          >
-            Notify Me
-          </button>
-        
-        </form>
-        <div>
-          <p className="text-black">{errorMessage}</p>
+
+          <div>
+            <p className="mb-5 pt-1 text-xs text-light-red md:px-4 md:pt-2">
+              {errorMessage}
+            </p>
           </div>
-      </div>
+        </div>
+        <button
+          type="submit"
+          onSubmit={handleSubmit}
+          className=" w-full rounded-full bg-blue py-3 text-white md:basis-1/3"
+        >
+          Notify Me
+        </button>
+      </form>
     </section>
   );
 };
