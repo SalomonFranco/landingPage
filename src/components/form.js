@@ -37,7 +37,7 @@ const Form = () => {
           <input
             type="text"
             value={emailValue}
-            placeholder="Your email address..."
+            placeholder="Tu correo electrónico..."
             onChange={handleInputChange}
             className={`w-full rounded-full border px-4 py-3 placeholder:text-pale-blue md:mb-0 md:basis-2/3 ${isEmailValid ? "border-pale-blue" : "border-light-red"}`}
           />
@@ -53,7 +53,7 @@ const Form = () => {
           onSubmit={handleSubmit}
           className=" w-full rounded-full bg-blue py-3 text-white md:basis-1/3"
         >
-          Notify Me
+          Notificame
         </button>
       </form>
     </section>

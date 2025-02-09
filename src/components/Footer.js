@@ -7,21 +7,20 @@ const Footer = () => {
   return (
     <footer>
       <div className="flex flex-row justify-center gap-3">
-      <a className="text-blue border rounded-full p-2 border-pale-blue hover:border-blue hover:bg-blue hover:text-white" href="https://facebook.com">
-        <FaFacebookF />
+      <a className="text-black border rounded-full p-2 border-pale-gray hover:border-black hover:bg-black hover:text-white" href="https://facebook.com">
+      <FaFacebookF />
       </a>
-      <a className="text-blue border rounded-full p-2 border-pale-blue hover:border-blue hover:bg-blue hover:text-white" href="https://facebook.com">
-        <FaTwitter  />
+      <a className="text-black border rounded-full p-2 border-pale-gray hover:border-black hover:bg-black hover:text-white" href="https://facebook.com">
+      <FaTwitter  />
       </a>
-      <a className="text-blue border rounded-full p-2 border-pale-blue hover:border-blue hover:bg-blue hover:text-white" href="https://facebook.com">
-        <FaInstagram />
+      <a className="text-black border rounded-full p-2 border-pale-gray hover:border-black hover:bg-black hover:text-white" href="https://facebook.com">        <FaInstagram />
       </a>
       </div>
 
      
 
       <p className="flex justify-center py-7 text-[10px] text-gray">
-        © Copyright Ping. All rights reserved.
+        © Copyright. All rights reserved.
       </p>
     </footer>
   );
