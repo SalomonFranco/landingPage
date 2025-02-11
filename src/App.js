@@ -11,8 +11,7 @@ function App() {
       <img
         src={mainImage}
         alt="mainImage"
-        className="px-8  pb-[120px] pt-[72px] md:mx-auto md:w-2/3"
-      />
+        className="w-full max-w-[400px] mx-auto block"      />
      <Footer/>
     </div>
   );

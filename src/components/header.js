@@ -4,7 +4,6 @@ import logo from "../images/logo.svg";
 const Header = () => {
   return (
     <header className="flex flex-col items-center px-8 py-[72px]">
-      <img src={logo} alt="logo" className="pb-8"/>
       <div className="pb-4">
         <span className="text-2xl font-light text-gray md:text-5xl">Casa </span>
         <span className="text-very-dark-blue text-2xl font-bold md:text-5xl">Blanca</span>
