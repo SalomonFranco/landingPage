@@ -31,7 +31,7 @@ const Form = () => {
   };
 
   return (
-    <section className="flex-col md:flex md:w-full md:items-center md:justify-start">
+    <section className="flex md:flex md:w-full md:items-center md:justify-start">
       <form
         onSubmit={handleSubmit}
         className="flex flex-row items-center justify-center px-8 md:w-full md:gap-2"
@@ -41,14 +41,14 @@ const Form = () => {
           value={emailValue}
           placeholder="email.."
           onChange={handleInputChange}
-          className={`w-48 rounded-full border px-2 py-1 placeholder:text-pale-blue text-sm ${
-            isEmailValid ? "border-pale-blue" : "border-light-red"
+          className={`w-48 rounded-full border px-2 py-1 placeholder:text-black text-sm ${
+            isEmailValid ? "border-black" : "border-black"
           }`}
         />
 
         <button
           type="submit"
-          className="rounded-full bg-blue py-1 px-4 text-white text-sm"
+          className="rounded-full bg-black py-1 px-4 text-white text-sm"
         >
           Suscribete
         </button>
